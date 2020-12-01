@@ -63,3 +63,24 @@ const myCoolFunction = function (input) {
 }
 
 myCoolFunction("Such a cool function");
+
+// Callback functions 
+
+// any function that is passed as argument to another function, and which is invoked by that other function
+
+function add(a, b) {
+    console.log("a+b =", a + b);
+    return a + b;
+}
+
+function subtract(a, b) {
+    console.log("a-b =", a - b);
+    return a - b;
+}
+
+function calculate(callback, a, b) {
+    callback(a, b)
+}
+
+calculate(add, 5, 3);
+calculate(subtract, 5, 3);
