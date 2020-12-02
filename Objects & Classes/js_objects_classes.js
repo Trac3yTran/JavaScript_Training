@@ -51,3 +51,15 @@ Person.prototype.role = "student";
 
 // the prototype is a template object that is shared between all instances of the same constructor in this case, Person.
 // Similar to a superclass in Ruby, except this isnt inheritance. 
+
+// We can also use prototype to define memeber functions outside of the constructor. This is considered to be best practice
+
+function Hero(name, level) {
+    this.name = name;
+    this.level = level;
+}
+
+Hero.prototype.shout = function () {
+    return `My name is ${this.name}!`;
+}
+
