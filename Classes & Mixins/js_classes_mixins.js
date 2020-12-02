@@ -76,3 +76,36 @@ tracey.speak()
 
 // Mixins
 
+// Class inheritance only allows one level of extension a class can extend only one superclass
+// Mixins provide a way to define additional functions that can be implemented by an object or class, and are like interfaces in traditional OOP languagues
+// Mixins are similar to the Ruby concept of modules 
+// Mixins is an obkect that provides additional functionality
+// Use Object.assign to add the mixin funtion to an object instance
+// An object can use as many as mixins as needed. 
+
+// the mixin
+
+const area = {
+    setUnits(units) {
+        this.units = units;
+    },
+    getArea() {
+        return this.length * this.width;
+    },
+    areaToString() {
+        return `${this.getArea()} ${this.units}`
+    }
+}
+
+// the class
+class Rectangle {
+    constructor(length, width) {
+        this.length = length;
+        this.width = width;
+    }
+}
+
+Object.assign(Rectangle.prototype, area);
+let shape = new Rectangle(3, 5);
+shape.setUnits("cms");
+console.log(shape.areaToString());
