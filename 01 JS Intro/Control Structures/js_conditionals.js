@@ -169,3 +169,13 @@ switch (userFavouriteColour) {
         console.log("The user's favourite colour is NOT in the rainbow!");
         break;
 }
+
+if (condition) {
+    // something happens in here
+} else if (condition) {
+    // something else happens
+} else if (condition) {
+    // something else heppens
+} else {
+    // default action happens
+}
