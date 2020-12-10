@@ -19,17 +19,14 @@ x.style.paddingLeft = "100px"
 
 
 //Manipulating the li from HTML
-
 let x = document.querySelector("li")
 
 
 // Using querySelectorAll to select all the li
-
 let x = document.querySelectorAll("li")
 
 // using the below to refer to the position of each li in html 
 x[1]
-
 
 //looping through each element that contain x and changing the color to 'red'
 for (item of x) { item.style.color = "red" }
@@ -39,3 +36,17 @@ let y = document.querySelectorAll("li:nth-child(odd)")
 
 //styling the y differently
 for (item of y) { item.style.color = "green" }
+
+//querySelector and querySelectorAll can work on all nodes 
+let lis = ul.querySelectorAll("li")
+
+//we can dynmatically create li and add to the content 
+let z = document.createElement("p")
+z.innerHTML = "Lorem ipsum dolor sit amet"
+
+/// need to add to the doc or else does not appear appendChild and give the node we want to append.
+document.body.appendChild(z)
+<p> Lorem ipsum dolor sit amet</p>
+
+// how to remove it dynmatically removeChild that item remove from the dom which means it no longer display. 
+document.body.removeChild(ul)

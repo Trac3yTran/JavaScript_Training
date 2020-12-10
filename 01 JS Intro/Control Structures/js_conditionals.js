@@ -144,7 +144,7 @@ if (password == submittedPassword) {
 let newPassword = "Password123";
 
 if (newPassword[0] != newPassword.toUpperCase()[0]) {
-    console.log("Passwprd does not start with capital letter!");
+    console.log("Password does not start with capital letter!");
 } else if (newPassword.toLowerCase().includes("password")) {
     console.log("Password should not user easy-to-guess words!");
 } else {
